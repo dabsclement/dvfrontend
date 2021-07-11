@@ -14,7 +14,7 @@ function Navbar() {
             Drummersville
           </a>
           <button
-            class="navbar-toggler"
+            class="navbar-toggler py-2"
             type="button"
             data-mdb-toggle="collapse"
             data-mdb-target="#navbarNav"

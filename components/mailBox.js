@@ -5,7 +5,7 @@ function MailBox() {
     <section>
       <div className="container text-center">
         <div className="row justify-content-center">
-          <div className="col col-7">
+          <div className="col col-12 col-md-12">
             <p
               className={` ${css(`
               font-family: Roboto;

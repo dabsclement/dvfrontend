@@ -85,9 +85,15 @@ export default function Home() {
                         font-family: Begum Sans;
                         font-style: normal;
                         font-weight: 700;
-                        font-size: 95px;
-                        line-height: 142.5px;
+                        font-size: 40px;
+                        line-height: 80.5px;
                         color: #dcd1bf;
+
+                        @(minWidth == 1024px){
+                          font-weight: 700;
+                          font-size: 95px;
+                          line-height: 142.5px;
+                        }
                       `}
                     >
                       Drummersville Podcast
@@ -141,29 +147,35 @@ export default function Home() {
         <div className="container py-4">
           <div className="row">
             <div
-              className="col col-6 text-center font-weight-bold"
+              className="col col-12 col-lg-5 col-xl-6 text-center font-weight-bold"
               style={{
                 fontSize: "25px",
                 color: "#84382B",
               }}
             >
-              <p>Boxen On</p>
+              <p className="m-0">Listen On</p>
             </div>
 
-            <div className="col col-6">
-              <div class="row">
-                <div class="col col-auto">
+            <div
+              className="col col-12 col-lg-7 col-xl-6 mt-4 mt-lg-0"
+              style={{ overflow: "scroll" }}
+            >
+              <div
+                class="d-block d-md-flex row justify-content-center"
+                style={{ overflow: "auto", width: "max-content" }}
+              >
+                <div class="col col-auto" style={{ float: "right" }}>
                   <Image src="./apple_music.png" />
                 </div>
-                <div class="col col-auto">
+                <div class="col col-auto" style={{ float: "right" }}>
                   <Image src="./spotify.png" />
                 </div>
 
-                <div class="col col-auto">
+                <div class="col col-auto" style={{ float: "right" }}>
                   <Image src="./gpodcasts.png" />
                 </div>
 
-                <div class="col col-auto">
+                <div class="col col-auto" style={{ float: "right" }}>
                   <Image src="./sticher.png" />
                 </div>
               </div>
@@ -174,9 +186,9 @@ export default function Home() {
 
       {/* latest podcasts */}
       <section>
-        <div className="container py-5">
-          <div className="d-flex justify-content-between">
-            <div className="d-flex align-items-center">
+        <div className="container py-3 py-md-5">
+          <div className="row justify-content-between">
+            <div className="col-12 col-md-auto d-flex align-items-center">
               <div>
                 <p
                   className={`m-0 text-uppercase ${css(`
@@ -202,7 +214,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="d-flex">
+            <div className="col-12 col-md-auto mt-3 mt-md-0 d-flex justify-content-between">
               <button
                 className={`btn ${css(`
                   width: 50px; 
@@ -233,7 +245,7 @@ export default function Home() {
 
           <div className="row mt-4">
             {latestPodcasts.map((podcast) => (
-              <div className="col col-6">
+              <div className="col mb-3 mb-md-0 col-12 col-md-6">
                 <LatestPodcastCard podcast={podcast} />
               </div>
             ))}
@@ -243,9 +255,9 @@ export default function Home() {
 
       {/* recommended podcasts */}
       <section>
-        <div className="container py-5">
-          <div className="d-flex justify-content-between">
-            <div className="d-flex align-items-center">
+        <div className="container py-3 py-md-5">
+          <div className="row justify-content-between">
+            <div className="col-12 col-md-auto d-flex align-items-center">
               <div>
                 <p
                   className={`m-0 text-uppercase ${css(`
@@ -253,7 +265,7 @@ export default function Home() {
                       color: #84382B;
                     `)}`}
                 >
-                  Recommend for you
+                  Recommended Podcasts
                 </p>
               </div>
 
@@ -267,11 +279,11 @@ export default function Home() {
               ></div>
 
               <div>
-                <button className="btn">view all podcast</button>
+                <button className="btn">view all podcasts</button>
               </div>
             </div>
 
-            <div className="d-flex">
+            <div className="col-12 col-md-auto mt-3 mt-md-0 d-flex justify-content-between">
               <button
                 className={`btn ${css(`
                   width: 50px; 
@@ -301,8 +313,8 @@ export default function Home() {
           </div>
 
           <div className="row mt-4">
-            {recommendededPodcasts.map((podcast) => (
-              <div className="col col-6">
+            {latestPodcasts.map((podcast) => (
+              <div className="col mb-3 mb-md-0 col-12 col-md-6">
                 <RecommendededPodcastsCard podcast={podcast} />
               </div>
             ))}
@@ -312,9 +324,9 @@ export default function Home() {
 
       {/* blogs */}
       <section>
-        <div className="container py-5">
-          <div className="d-flex justify-content-between">
-            <div className="d-flex align-items-center">
+        <div className="container py-3 py-md-5">
+          <div className="row justify-content-between">
+            <div className="col-12 col-md-auto d-flex align-items-center">
               <div>
                 <p
                   className={`m-0 text-uppercase ${css(`
@@ -340,7 +352,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="d-flex">
+            <div className="col-12 col-md-auto mt-3 mt-md-0 d-flex justify-content-between">
               <button
                 className={`btn ${css(`
                   width: 50px; 
@@ -370,8 +382,8 @@ export default function Home() {
           </div>
 
           <div className="row mt-4">
-            {blogs.map((blog) => (
-              <div className="col col-6">
+            {latestPodcasts.map((blog) => (
+              <div className="col mb-3 mb-md-0 col-12 col-md-6">
                 <BlogCard blog={blog} />
               </div>
             ))}

@@ -1,0 +1,22 @@
+[
+  {
+    "image": "./podcast1.png",
+    "title": "Druid’s Podcasts, the mere feelings",
+    "subtitle": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+    "caption": "How to choose the right microphone?",
+    "author": "Mark Dino",
+    "category": "recommended",
+    "date": "november 2020",
+    "comments": 10
+  },
+  {
+    "image": "./podcast1.png",
+    "title": "Druid’s Podcasts, the mere feelings",
+    "subtitle": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+    "caption": "How to choose the right microphone?",
+    "author": "Jamal Sinzu",
+    "category": "latest",
+    "date": "october 2020",
+    "comments": 0
+  }
+]

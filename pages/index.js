@@ -157,8 +157,15 @@ export default function Home() {
             </div>
 
             <div
-              className="col col-12 col-lg-7 col-xl-6 mt-4 mt-lg-0"
-              style={{ overflow: "scroll" }}
+              // className="col col-12 col-lg-7 col-xl-6 mt-4 mt-lg-0"
+              // style={{ overflow: "scroll" }}
+              className={`d-block d-md-flex row justify-content-center 
+                ${css(`
+                width: max-content;
+                @media (max-width: 425px){
+                  overflow: auto
+                }
+                `)}`}
             >
               <div
                 class="d-block d-md-flex row justify-content-center"

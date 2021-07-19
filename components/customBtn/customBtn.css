@@ -1,0 +1,46 @@
+.btnsContainer {
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: relative;
+    cursor: pointer;
+}
+
+.btnsContainer .btn1, .btnsContainer .btn2, .btnsContainer .btn3{
+    border-radius: 5px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+}
+
+
+.btnsContainer .btn3 {
+    color: white;
+    background: #000000;
+    border-radius: 50px;
+    transform: rotate(-5deg);
+}
+
+.btnsContainer .btn2 {
+    color: white;
+    /* position: absolute; */
+    background: #000000;
+    opacity: 0.4;
+    border-radius: 50px;
+}
+
+.btnsContainer .btn1 {
+    background: #000000;
+    opacity: 0.4;
+    border-radius: 50px;
+    transform: rotate(5deg);
+}
+
+.btnsContainer .text{
+    z-index: 5;
+}

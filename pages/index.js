@@ -16,7 +16,7 @@ import mockBlogs from "../utilities/blogs.json";
 import { useEffect, useState } from "react";
 import LatestPodcastCard from "../components/latestPodcastCard";
 import RecommendededPodcastsCard from "../components/recommendedPodcastCard";
-import MailBox from "../components/MailBox";
+import MailBox from "../components/mailBox";
 import BlogCard from "../components/blogCard";
 
 export default function Home() {

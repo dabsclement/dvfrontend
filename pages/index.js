@@ -16,7 +16,7 @@ import mockBlogs from "../utilities/blogs.json";
 import { useEffect, useState } from "react";
 import LatestPodcastCard from "../components/latestPodcastCard";
 import RecommendededPodcastsCard from "../components/recommendedPodcastCard";
-import MailBox from "../components/mailBox";
+import MailBox from "../components/MailBox";
 import BlogCard from "../components/blogCard";
 
 export default function Home() {
@@ -75,8 +75,8 @@ export default function Home() {
           }}
         >
           <div class="container h-100">
-            <div className="row justify-content-center align-items-center h-100">
-              <div className="column">
+            <div className="row mt-5 mt-lg-0 justify-content-center align-items-center h-100">
+              <div className="col mt-5 mt-lg-0">
                 <div className="row justify-content-center">
                   <div className="col text-center col-12 col-md-8">
                     <h1
@@ -156,35 +156,20 @@ export default function Home() {
               <p className="m-0">Listen On</p>
             </div>
 
-            <div
-              // className="col col-12 col-lg-7 col-xl-6 mt-4 mt-lg-0"
-              // style={{ overflow: "scroll" }}
-              className={`d-block d-md-flex row justify-content-center 
-                ${css(`
-                width: max-content;
-                @media (max-width: 425px){
-                  overflow: auto
-                }
-                `)}`}
-            >
-              <div
-                class="d-block d-md-flex row justify-content-center"
-                style={{ overflow: "auto", width: "max-content" }}
-              >
-                <div class="col col-auto" style={{ float: "right" }}>
-                  <Image src="./apple_music.png" />
-                </div>
-                <div class="col col-auto" style={{ float: "right" }}>
-                  <Image src="./spotify.png" />
-                </div>
+            <div class="row m-0 justify-content-center">
+              <div class="col-auto mt-4">
+                <Image src="./apple_music.png" />
+              </div>
+              <div class="col-auto mt-4">
+                <Image src="./spotify.png" />
+              </div>
 
-                <div class="col col-auto" style={{ float: "right" }}>
-                  <Image src="./gpodcasts.png" />
-                </div>
+              <div class="col-auto mt-4">
+                <Image src="./gpodcasts.png" />
+              </div>
 
-                <div class="col col-auto" style={{ float: "right" }}>
-                  <Image src="./sticher.png" />
-                </div>
+              <div class="col-auto mt-4">
+                <Image src="./sticher.png" />
               </div>
             </div>
           </div>

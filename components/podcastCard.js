@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlay } from "@fortawesome/free-solid-svg-icons";
 import { Image } from "react-bootstrap";
 
-function LatestPodcastCard({ data }) {
+function PodcastCard({ data }) {
   const { image, title, subtitle } = data;
 
   return (
@@ -51,4 +51,4 @@ function LatestPodcastCard({ data }) {
   );
 }
 
-export default LatestPodcastCard;
+export default PodcastCard;

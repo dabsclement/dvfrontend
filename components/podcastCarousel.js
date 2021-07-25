@@ -109,9 +109,9 @@ function PodcastCarousel({ data, Card, title, subtitle }) {
 
           <Carousel activeIndex={index} indicators={false} controls={false}>
             <Carousel.Item>
-              <div className="row mt-4">
+              <div className="row mt-4 justify-content-center">
                 {data.slice(0, 2).map((data) => (
-                  <div className="col mb-3 mb-md-0 col-12 col-md-6">
+                  <div className="col mb-3 mb-md-0 col-12 col-md-6 col-xl-5">
                     <Card data={data} />
                   </div>
                 ))}
@@ -120,9 +120,9 @@ function PodcastCarousel({ data, Card, title, subtitle }) {
 
             {carouselItemCount >= 2 && (
               <Carousel.Item>
-                <div className="row mt-4">
+                <div className="row mt-4 justify-content-center">
                   {data.slice(2, 4).map((data) => (
-                    <div className="col mb-3 mb-md-0 col-12 col-md-6">
+                    <div className="col mb-3 mb-md-0 col-12 col-md-6 col-xl-5">
                       <Card data={data} />
                     </div>
                   ))}
@@ -132,9 +132,9 @@ function PodcastCarousel({ data, Card, title, subtitle }) {
 
             {carouselItemCount >= 4 && (
               <Carousel.Item>
-                <div className="row mt-4">
+                <div className="row mt-4 justify-content-center">
                   {data.slice(4, 6).map((data) => (
-                    <div className="col mb-3 mb-md-0 col-12 col-md-6">
+                    <div className="col mb-3 mb-md-0 col-12 col-md-6 col-xl-5">
                       <Card data={data} />
                     </div>
                   ))}

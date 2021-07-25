@@ -14,11 +14,12 @@ import { Carousel, Image } from "react-bootstrap";
 import podcasts from "../utilities/podcasts.json";
 import mockBlogs from "../utilities/blogs.json";
 import { useEffect, useState } from "react";
-import LatestPodcastCard from "../components/latestPodcastCard";
+import PodcastCard from "../components/podcastCard";
 import RecommendededPodcastsCard from "../components/recommendedPodcastCard";
 import MailBox from "../components/MailBox";
 import BlogCard from "../components/blogCard";
 import PodcastCarousel from "../components/podcastCarousel";
+import WhereToListen from "../components/whereToListen";
 
 export default function Home() {
   const [latestPodcasts, setLatestPodcasts] = useState([]);
@@ -141,51 +142,13 @@ export default function Home() {
         </div>
       </div>
 
-      <section
-        className={css(`
-      background: radial-gradient(100% 11900.82% at 100% 50%, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
-      backdrop-filter: blur(42px);
-      `)}
-      >
-        <div className="container py-4">
-          <div className="row align-items-center">
-            <div
-              className="col col-12 col-lg-5 col-xl-6 text-center font-weight-bold"
-              style={{
-                fontSize: "25px",
-                color: "#84382B",
-              }}
-            >
-              <p className="m-0">Listen On</p>
-            </div>
-
-            <div className="col col-12 col-lg-6 text-center font-weight-bold">
-              <div class="row m-0 justify-content-center">
-                <div class="col-auto mt-4">
-                  <Image src="./apple_music.png" />
-                </div>
-                <div class="col-auto mt-4">
-                  <Image src="./spotify.png" />
-                </div>
-
-                <div class="col-auto mt-4">
-                  <Image src="./gpodcasts.png" />
-                </div>
-
-                <div class="col-auto mt-4">
-                  <Image src="./sticher.png" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
+      <WhereToListen />
+      
       <PodcastCarousel
         title="Latest Podcasts"
         subtitle="view all data"
         data={latestPodcasts}
-        Card={LatestPodcastCard}
+        Card={PodcastCard}
       />
       
       <PodcastCarousel
@@ -194,7 +157,7 @@ export default function Home() {
         data={recommendededPodcasts}
         Card={RecommendededPodcastsCard}
       />
-      
+
       <PodcastCarousel
         title="Blog posts"
         subtitle="view all blog posts"

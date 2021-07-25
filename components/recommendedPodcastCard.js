@@ -3,15 +3,15 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlay } from "@fortawesome/free-solid-svg-icons";
 import { Image } from "react-bootstrap";
 
-function RecommendededPodcastsCard({ podcast }) {
-  const { image, title, subtitle, caption, author } = podcast;
+function RecommendededPodcastsCard({ data }) {
+  const { image, title, subtitle, caption, author } = data;
   return (
     <figure
       className={`m-0 mt-3 ${css(`
               background: radial-gradient(100% 58.13% at 100% 50%, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
             `)}`}
     >
-      <Image className="img-fluid" src={image} alt={title} />
+      <Image className="img-fluid w-100" src={image} alt={title} />
       <blockquote
         className={`m-0 mt-3 text-uppercase ${css(`
               font-size: 25px;

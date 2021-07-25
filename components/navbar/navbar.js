@@ -32,7 +32,7 @@ function Navbar() {
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="/podcast">
                   Podcast
                 </a>
               </li>
@@ -50,7 +50,7 @@ function Navbar() {
                 <a
                   class="nav-link disabled"
                   href="#"
-                  tabindex="-1"
+                  tabIndex="-1"
                   aria-disabled="true"
                 >
                   signup

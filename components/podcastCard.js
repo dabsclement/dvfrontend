@@ -3,12 +3,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlay } from "@fortawesome/free-solid-svg-icons";
 import { Image } from "react-bootstrap";
 
-function LatestPodcastCard({ podcast }) {
-  const { image, title, subtitle } = podcast;
+function PodcastCard({ data }) {
+  const { image, title, subtitle } = data;
 
   return (
     <figure style={{ position: "relative" }}>
-      <Image className="img-fluid" src={image} alt={title} />
+      <Image className="img-fluid w-100" src={image} alt={title} />
 
       <button
         className={`btn ${css(`
@@ -51,4 +51,4 @@ function LatestPodcastCard({ podcast }) {
   );
 }
 
-export default LatestPodcastCard;
+export default PodcastCard;

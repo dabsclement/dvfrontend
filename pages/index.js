@@ -10,7 +10,7 @@ import {
   faChevronRight,
   faPlay,
 } from "@fortawesome/free-solid-svg-icons";
-import { Image } from "react-bootstrap";
+import { Carousel, Image } from "react-bootstrap";
 import podcasts from "../utilities/podcasts.json";
 import mockBlogs from "../utilities/blogs.json";
 import { useEffect, useState } from "react";
@@ -18,34 +18,37 @@ import LatestPodcastCard from "../components/latestPodcastCard";
 import RecommendededPodcastsCard from "../components/recommendedPodcastCard";
 import MailBox from "../components/MailBox";
 import BlogCard from "../components/blogCard";
+import PodcastCarousel from "../components/podcastCarousel";
 
 export default function Home() {
   const [latestPodcasts, setLatestPodcasts] = useState([]);
   const [recommendededPodcasts, setRecommendedPodcasts] = useState([]);
   const [blogs, setBlogs] = useState([]);
 
+  const [index, setIndex] = useState(0);
+  const [carouselItemCount, setCarouselItemCount] = useState(3);
+  const [direction, setDirection] = useState();
+
   // set the blogs
   useEffect(() => {
-    let blogsCopy = mockBlogs;
-    let blogsData = blogsCopy.splice(0, 4);
-    setBlogs(blogsData);
+    setBlogs(mockBlogs);
   }, []);
 
   // set the recommended podcasts
   useEffect(() => {
     let podcastCopy = podcasts;
-    let recommendedPodcasts = podcastCopy
-      .filter((podcast) => podcast.category === "recommended")
-      .splice(0, 4);
+    let recommendedPodcasts = podcastCopy.filter(
+      (podcast) => podcast.category === "recommended"
+    );
     setRecommendedPodcasts(recommendedPodcasts);
   }, []);
 
   // set the latest podcasts
   useEffect(() => {
     let podcastCopy = podcasts;
-    let latestPodcasts = podcastCopy
-      .filter((podcast) => podcast.category === "latest")
-      .splice(0, 2);
+    let latestPodcasts = podcastCopy.filter(
+      (podcast) => podcast.category === "latest"
+    );
     setLatestPodcasts(latestPodcasts);
   }, []);
 
@@ -145,7 +148,7 @@ export default function Home() {
       `)}
       >
         <div className="container py-4">
-          <div className="row">
+          <div className="row align-items-center">
             <div
               className="col col-12 col-lg-5 col-xl-6 text-center font-weight-bold"
               style={{
@@ -156,232 +159,48 @@ export default function Home() {
               <p className="m-0">Listen On</p>
             </div>
 
-            <div class="row m-0 justify-content-center">
-              <div class="col-auto mt-4">
-                <Image src="./apple_music.png" />
-              </div>
-              <div class="col-auto mt-4">
-                <Image src="./spotify.png" />
-              </div>
+            <div className="col col-12 col-lg-6 text-center font-weight-bold">
+              <div class="row m-0 justify-content-center">
+                <div class="col-auto mt-4">
+                  <Image src="./apple_music.png" />
+                </div>
+                <div class="col-auto mt-4">
+                  <Image src="./spotify.png" />
+                </div>
 
-              <div class="col-auto mt-4">
-                <Image src="./gpodcasts.png" />
-              </div>
+                <div class="col-auto mt-4">
+                  <Image src="./gpodcasts.png" />
+                </div>
 
-              <div class="col-auto mt-4">
-                <Image src="./sticher.png" />
+                <div class="col-auto mt-4">
+                  <Image src="./sticher.png" />
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* latest podcasts */}
-      <section>
-        <div className="container py-3 py-md-5">
-          <div className="row justify-content-between">
-            <div className="col-12 col-md-auto d-flex align-items-center">
-              <div>
-                <p
-                  className={`m-0 text-uppercase ${css(`
-                      font-size: 25px;
-                      color: #84382B;
-                    `)}`}
-                >
-                  Latest Podcasts
-                </p>
-              </div>
-
-              <div
-                className={css(`
-                  width: 40px;
-                  height: 1px;
-                  background: #000000;
-                  margin: 0 20px;
-              `)}
-              ></div>
-
-              <div>
-                <button className="btn">view all podcast</button>
-              </div>
-            </div>
-
-            <div className="col-12 col-md-auto mt-3 mt-md-0 d-flex justify-content-between">
-              <button
-                className={`btn ${css(`
-                  width: 50px; 
-                  border-radius: 50%;
-                  height: 50px; 
-                  background: radial-gradient(168% 168% at -24% 50%, #84382B 0%, rgba(132, 56, 43, 0.8) 100%);
-                  margin-right: 10px;
-                  color: #ffffff;
-                  `)}`}
-              >
-                <FontAwesomeIcon icon={faChevronLeft} />
-              </button>
-
-              <button
-                className={`btn ${css(`
-                  width: 50px; 
-                  border-radius: 50%;
-                  height: 50px; 
-                  background: radial-gradient(168% 168% at -24% 50%, #84382B 0%, rgba(132, 56, 43, 0.8) 100%);
-                  margin-right: 10px;
-                  color: #ffffff;
-                  `)}`}
-              >
-                <FontAwesomeIcon icon={faChevronRight} />
-              </button>
-            </div>
-          </div>
-
-          <div className="row mt-4">
-            {latestPodcasts.map((podcast) => (
-              <div className="col mb-3 mb-md-0 col-12 col-md-6">
-                <LatestPodcastCard podcast={podcast} />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* recommended podcasts */}
-      <section>
-        <div className="container py-3 py-md-5">
-          <div className="row justify-content-between">
-            <div className="col-12 col-md-auto d-flex align-items-center">
-              <div>
-                <p
-                  className={`m-0 text-uppercase ${css(`
-                      font-size: 25px;
-                      color: #84382B;
-                    `)}`}
-                >
-                  Recommended Podcasts
-                </p>
-              </div>
-
-              <div
-                className={css(`
-                  width: 40px;
-                  height: 1px;
-                  background: #000000;
-                  margin: 0 20px;
-              `)}
-              ></div>
-
-              <div>
-                <button className="btn">view all podcasts</button>
-              </div>
-            </div>
-
-            <div className="col-12 col-md-auto mt-3 mt-md-0 d-flex justify-content-between">
-              <button
-                className={`btn ${css(`
-                  width: 50px; 
-                  border-radius: 50%;
-                  height: 50px; 
-                  background: radial-gradient(168% 168% at -24% 50%, #84382B 0%, rgba(132, 56, 43, 0.8) 100%);
-                  margin-right: 10px;
-                  color: #ffffff;
-                  `)}`}
-              >
-                <FontAwesomeIcon icon={faChevronLeft} />
-              </button>
-
-              <button
-                className={`btn ${css(`
-                  width: 50px; 
-                  border-radius: 50%;
-                  height: 50px; 
-                  background: radial-gradient(168% 168% at -24% 50%, #84382B 0%, rgba(132, 56, 43, 0.8) 100%);
-                  margin-right: 10px;
-                  color: #ffffff;
-                  `)}`}
-              >
-                <FontAwesomeIcon icon={faChevronRight} />
-              </button>
-            </div>
-          </div>
-
-          <div className="row mt-4">
-            {latestPodcasts.map((podcast) => (
-              <div className="col mb-3 mb-md-0 col-12 col-md-6">
-                <RecommendededPodcastsCard podcast={podcast} />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* blogs */}
-      <section>
-        <div className="container py-3 py-md-5">
-          <div className="row justify-content-between">
-            <div className="col-12 col-md-auto d-flex align-items-center">
-              <div>
-                <p
-                  className={`m-0 text-uppercase ${css(`
-                      font-size: 25px;
-                      color: #84382B;
-                    `)}`}
-                >
-                  Blogs
-                </p>
-              </div>
-
-              <div
-                className={css(`
-                  width: 40px;
-                  height: 1px;
-                  background: #000000;
-                  margin: 0 20px;
-              `)}
-              ></div>
-
-              <div>
-                <button className="btn">view all blogs</button>
-              </div>
-            </div>
-
-            <div className="col-12 col-md-auto mt-3 mt-md-0 d-flex justify-content-between">
-              <button
-                className={`btn ${css(`
-                  width: 50px; 
-                  border-radius: 50%;
-                  height: 50px; 
-                  background: radial-gradient(168% 168% at -24% 50%, #84382B 0%, rgba(132, 56, 43, 0.8) 100%);
-                  margin-right: 10px;
-                  color: #ffffff;
-                  `)}`}
-              >
-                <FontAwesomeIcon icon={faChevronLeft} />
-              </button>
-
-              <button
-                className={`btn ${css(`
-                  width: 50px; 
-                  border-radius: 50%;
-                  height: 50px; 
-                  background: radial-gradient(168% 168% at -24% 50%, #84382B 0%, rgba(132, 56, 43, 0.8) 100%);
-                  margin-right: 10px;
-                  color: #ffffff;
-                  `)}`}
-              >
-                <FontAwesomeIcon icon={faChevronRight} />
-              </button>
-            </div>
-          </div>
-
-          <div className="row mt-4">
-            {latestPodcasts.map((blog) => (
-              <div className="col mb-3 mb-md-0 col-12 col-md-6">
-                <BlogCard blog={blog} />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <PodcastCarousel
+        title="Latest Podcasts"
+        subtitle="view all data"
+        data={latestPodcasts}
+        Card={LatestPodcastCard}
+      />
+      
+      <PodcastCarousel
+        title="Recommended for you"
+        subtitle="view all data"
+        data={recommendededPodcasts}
+        Card={RecommendededPodcastsCard}
+      />
+      
+      <PodcastCarousel
+        title="Blog posts"
+        subtitle="view all blog posts"
+        data={blogs}
+        Card={BlogCard}
+      />
 
       <div className="my-5">
         <MailBox />

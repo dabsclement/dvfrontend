@@ -3,15 +3,15 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlay } from "@fortawesome/free-solid-svg-icons";
 import { Image } from "react-bootstrap";
 
-function BlogCard({ blog }) {
-  const { image, title, subtitle, author, comments, date } = blog;
+function BlogCard({ data }) {
+  const { image, title, subtitle, author, comments, date } = data;
   return (
     <figure
       className={`m-0 mt-3 ${css(`
               background: radial-gradient(100% 58.13% at 100% 50%, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
             `)}`}
     >
-      <Image className="img-fluid" src="./podcast1.png" />
+      <Image className="img-fluid w-100" src="./podcast1.png" />
 
       <div
         className={`d-flex justify-content-between mt-3 ${css(`

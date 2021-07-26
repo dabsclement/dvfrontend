@@ -16,7 +16,7 @@ import mockBlogs from "../utilities/blogs.json";
 import { useEffect, useState } from "react";
 import PodcastCard from "../components/podcastCard";
 import RecommendededPodcastsCard from "../components/recommendedPodcastCard";
-import MailBox from "../components/MailBox";
+import MailBox from "../components/mailBox";
 import BlogCard from "../components/blogCard";
 import PodcastCarousel from "../components/podcastCarousel";
 import WhereToListen from "../components/whereToListen";
@@ -143,14 +143,14 @@ export default function Home() {
       </div>
 
       <WhereToListen />
-      
+
       <PodcastCarousel
         title="Latest Podcasts"
         subtitle="view all data"
         data={latestPodcasts}
         Card={PodcastCard}
       />
-      
+
       <PodcastCarousel
         title="Recommended for you"
         subtitle="view all data"

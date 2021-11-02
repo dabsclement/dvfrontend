@@ -6,11 +6,11 @@ function Navbar() {
   return (
     <>
       <nav
-        class="navbar navbar-expand-lg navbar-light py-2"
-        style={{ background: "transparrent" }}
+        class="navbar navbar-expand-lg navbar-light"
+        style={{ background: "#3E2D1B!important" }}
       >
         <div class="container">
-          <a class="navbar-brand" href="/">
+          <a class="navLogo" href="/">
             Drummersville
           </a>
           <button
@@ -27,28 +27,28 @@ function Navbar() {
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">
+                <a class="navLinks active" aria-current="page" href="#">
                   Home
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/podcast">
+                <a class="navLinks" href="/podcast">
                   Podcast
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="navLinks" href="#">
                   Blog
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="navLinks" href="#">
                   Contact
                 </a>
               </li>
               <li class="nav-item">
                 <a
-                  class="nav-link disabled"
+                  class="navLinks disabled"
                   href="#"
                   tabIndex="-1"
                   aria-disabled="true"

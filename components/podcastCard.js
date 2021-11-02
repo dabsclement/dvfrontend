@@ -4,7 +4,7 @@ import { faPlay } from "@fortawesome/free-solid-svg-icons";
 import { Image } from "react-bootstrap";
 
 function PodcastCard({ data }) {
-  const { image, title, subtitle } = data;
+  const { image, title, subtitle, audio } = data;
 
   return (
     <figure style={{ position: "relative" }}>
@@ -34,7 +34,11 @@ function PodcastCard({ data }) {
             `)}`}
       >
         {title}
+        <audio control>
+          <source src={audio} type="audio/mpeg" />
+        </audio>
       </blockquote>
+
       <figcaption
         className={`${css(`
             font-family: Halyard Micro;

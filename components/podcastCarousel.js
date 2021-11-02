@@ -86,6 +86,7 @@ function PodcastCarousel({ data, Card, title, subtitle }) {
                   background: radial-gradient(168% 168% at -24% 50%, #84382B 0%, rgba(132, 56, 43, 0.8) 100%);
                   margin-right: 10px;
                   color: #ffffff;
+                  outline: none;
                   `)}`}
               >
                 <FontAwesomeIcon icon={faChevronLeft} />
@@ -100,6 +101,8 @@ function PodcastCarousel({ data, Card, title, subtitle }) {
                   background: radial-gradient(168% 168% at -24% 50%, #84382B 0%, rgba(132, 56, 43, 0.8) 100%);
                   margin-right: 10px;
                   color: #ffffff;
+                  outline: none;
+
                   `)}`}
               >
                 <FontAwesomeIcon icon={faChevronRight} />

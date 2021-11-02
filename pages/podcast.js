@@ -5,9 +5,14 @@ import Navbar from "../components/navbar/navbar";
 import PodcastCard from "../components/podcastCard";
 import WhereToListen from "../components/whereToListen";
 import mockPodcasts from "../utilities/podcasts.json";
+import '../styles/Home.module.css'
 
 function Podcast() {
   const [podcasts, setPodcasts] = useState([]);
+  const [service, setService] = useState(1)
+  const toogleTap = (index) => {
+    setService(index)
+  }
 
   useEffect(() => {
     setPodcasts(mockPodcasts);
@@ -35,10 +40,38 @@ function Podcast() {
       <div className="container">
         <div className="d-flex justify-content-between py-4">
           <div>
-            <label className="mx-3">category</label>
-            <select>
-              <option>pop</option>
-              <option>jazz</option>
+            <label
+              className="mx-3"
+              style={{
+                color: "#84382B",
+              }}
+            >
+              category
+            </label>
+            <select
+              style={{
+                padding: "5px 40px 5px 0px",
+                background: "#fff",
+                border: "1px solid #84382b",
+                borderRadius: "6px",
+              }}
+            >
+              <option
+                style={{
+                  color: "#969696",
+                  display: "flex",
+                  justifyContent: "space-between",
+                }}
+              >
+                pop
+              </option>
+              <option
+                style={{
+                  color: "#969696",
+                }}
+              >
+                jazz
+              </option>
             </select>
           </div>
 
@@ -49,17 +82,38 @@ function Podcast() {
             >
               <button
                 className="btn text-light"
-                style={{ backgroundColor: "#84382B" }}
+                onClick={() => toogleTap(1)}
+                className={
+                  service === 1
+                    ? `${sectionStyle.tittle} ${sectionStyle.active} `
+                    : sectionStyle.tittle
+                }
               >
                 Featured
               </button>
               <button
                 className="btn"
-                style={{ borderRight: "1px solid #84382B" }}
+                style={{ borderRight: "1px solid #84382B", outline: "none" }}
+                onClick={() => toogleTap(1)}
+                className={
+                  service === 1
+                    ? `${sectionStyle.tittle} ${sectionStyle.active} `
+                    : sectionStyle.tittle
+                }
               >
                 New
               </button>
-              <button className="btn">On sale</button>
+              <button
+                className="btn"
+                onClick={() => toogleTap(1)}
+                className={
+                  service === 1
+                    ? `${sectionStyle.tittle} ${sectionStyle.active} `
+                    : sectionStyle.tittle
+                }
+              >
+                On sale
+              </button>
             </div>
           </div>
         </div>

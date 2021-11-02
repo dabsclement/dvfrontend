@@ -25,18 +25,18 @@ function WhereToListen() {
             <div className="col col-12 col-lg-6 text-center font-weight-bold">
               <div class="row m-0 justify-content-center">
                 <div class="col-auto mt-4">
-                  <Image src="./apple_music.png" />
+                  <a href = '/'><Image src="./apple_music.png" /></a>
                 </div>
                 <div class="col-auto mt-4">
-                  <Image src="./spotify.png" />
-                </div>
-
-                <div class="col-auto mt-4">
-                  <Image src="./gpodcasts.png" />
+                  <a href = '/'><Image src="./spotify.png" /></a>
                 </div>
 
                 <div class="col-auto mt-4">
-                  <Image src="./sticher.png" />
+                  <a href = '/'><Image src="./gpodcasts.png" /></a>
+                </div>
+
+                <div class="col-auto mt-4">
+                  <a href = '/'><Image src="./sticher.png" /></a>
                 </div>
               </div>
             </div>

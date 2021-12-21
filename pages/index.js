@@ -70,13 +70,13 @@ export default function Home() {
         style={{
           display: "grid",
           gridTemplateRows: "auto 1fr auto",
-          minHeight: "90vh",
+          minHeight: "80vh",
           background: "url('./ryan-holloway-XUXx8X4znHU-unsplash 1.png')",
         }}
       >
         <div
           style={{
-            minHeight: "90vh",
+            minHeight: "80vh",
             background: "rgba(62, 45, 27, 0.8)",
           }}
         >

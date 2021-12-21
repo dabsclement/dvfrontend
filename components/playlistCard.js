@@ -3,31 +3,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlay } from "@fortawesome/free-solid-svg-icons";
 import { Image } from "react-bootstrap";
 
-function PodcastCard({ data }) {
-  
+function playlistCard({ data }) {
   const { image, title, subtitle, audio } = data;
 
-  console.log(title)
+  console.log(title);
 
   return (
     <figure style={{ position: "relative" }}>
-      <Image className="img-fluid w-100" src={image} alt={title} />
-
-      <button
-        className={`btn ${css(`
-          width: 50px; 
-          border-radius: 50px;
-          height: 50px; 
-          background: radial-gradient(168% 168% at -24% 50%, #84382B 0%, rgba(132, 56, 43, 0.8) 100%);
-          margin-right: 10px;
-          color: #ffffff;
-          position: absolute;
-          right:0;
-          top: 480px;
-          `)}`}
-      >
-        <FontAwesomeIcon icon={faPlay}  style = {{color: '#fff'}}/>
-      </button>
+      <Image className="img-fluid w-100" src={title} alt={title} />
 
       <blockquote
         className={`m-0 mt-3 text-uppercase ${css(`
@@ -58,4 +41,4 @@ function PodcastCard({ data }) {
   );
 }
 
-export default PodcastCard;
+export default playlistCard;

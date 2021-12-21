@@ -1,11 +1,11 @@
-.container {
+/* .container {
   min-height: 100vh;
   padding: 0 0.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
+} */
 
 .main {
   padding: 5rem 0;
@@ -45,9 +45,7 @@
 .title a:active {
   text-decoration: underline;
 }
-.active{
-  background: #84382B;
-}
+
 
 .title {
   margin: 0;

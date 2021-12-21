@@ -1,7 +1,5 @@
 .main {
-  height: 604px;
   background: #f3f1ed;
-  position: relative;
 }
 .main h1 {
   position: absolute;
@@ -21,7 +19,9 @@
     width: 80%;
     margin: auto;
     position: relative;
-    top: 45%;
+    top: 50%;
+    left: 30%;
+    transform: translate(-30%,  -50%);
 }
 .commentBtn {
   background: #84382b;
@@ -154,5 +154,26 @@
     .comment{
         width: 100%;
     }
+}
+@media (max-width: 768px) {
+  .main{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .main h1{
+    top: 10%;
+  }
+
+  .comment{
+    margin-top: 160px;
+    flex-direction: column;
+  }
+  .commentBtn{
+    margin-bottom: 30px;
+  }
+  .commentBtn2{
+    margin-bottom: 30px;
+  }
 }
 

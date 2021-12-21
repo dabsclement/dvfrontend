@@ -9,7 +9,7 @@ function Navbar() {
         class="navbar navbar-expand-lg navbar-light"
         style={{ background: "#3E2D1B!important" }}
       >
-        <div class="container">
+        <div class="mainNav">
           <a class="navLogo" href="/">
             Drummersville
           </a>
@@ -27,7 +27,7 @@ function Navbar() {
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="navLinks active" aria-current="page" href="#">
+                <a class="navLinks active" aria-current="page" href="/">
                   Home
                 </a>
               </li>
@@ -37,7 +37,7 @@ function Navbar() {
                 </a>
               </li>
               <li class="nav-item">
-                <a class="navLinks" href="#">
+                <a class="navLinks" href="/blog">
                   Blog
                 </a>
               </li>
@@ -48,10 +48,8 @@ function Navbar() {
               </li>
               <li class="nav-item">
                 <a
-                  class="navLinks disabled"
-                  href="#"
-                  tabIndex="-1"
-                  aria-disabled="true"
+                  class="navLinks"
+                  href="/signup"
                 >
                   signup
                 </a>

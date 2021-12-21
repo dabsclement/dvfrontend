@@ -17,3 +17,12 @@ a:hover{
     font-weight: bold;
     color: #dcd1bf;
 }
+.mainNav{
+    display: flex;
+    flex-wrap: inherit;
+    align-items: center;
+    justify-content: space-between;
+    height: 40px !important;
+    width: 90%;
+    margin: auto;
+}

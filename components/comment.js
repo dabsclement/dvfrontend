@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { FaQuoteLeft } from 'react-icons/fa'
 const comment = () => {
   return (
-    <div className="main">
+    <div className="maincomment">
       <h1>Word on the street</h1>
 
       <div className="comment">

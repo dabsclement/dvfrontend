@@ -87,6 +87,7 @@ function PodcastCarousel({ data, Card, title, subtitle }) {
                   margin-right: 10px;
                   color: #ffffff;
                   outline: none;
+                  
                   `)}`}
               >
                 <FontAwesomeIcon icon={faChevronLeft} />
@@ -102,7 +103,6 @@ function PodcastCarousel({ data, Card, title, subtitle }) {
                   margin-right: 10px;
                   color: #ffffff;
                   outline: none;
-
                   `)}`}
               >
                 <FontAwesomeIcon icon={faChevronRight} />
@@ -114,7 +114,7 @@ function PodcastCarousel({ data, Card, title, subtitle }) {
             <Carousel.Item>
               <div className="row mt-4 justify-content-center">
                 {data.slice(0, 2).map((data) => (
-                  <div className="col mb-3 mb-md-0 col-12 col-md-6 col-xl-5">
+                  <div className="col mb-5 mb-md-0 col-12 col-md-6 col-xl-5">
                     <Card data={data} />
                   </div>
                 ))}
@@ -125,7 +125,7 @@ function PodcastCarousel({ data, Card, title, subtitle }) {
               <Carousel.Item>
                 <div className="row mt-4 justify-content-center">
                   {data.slice(2, 4).map((data) => (
-                    <div className="col mb-3 mb-md-0 col-12 col-md-6 col-xl-5">
+                    <div className="col mb-5 mb-md-0 col-12 col-md-6 col-xl-5">
                       <Card data={data} />
                     </div>
                   ))}
@@ -137,7 +137,7 @@ function PodcastCarousel({ data, Card, title, subtitle }) {
               <Carousel.Item>
                 <div className="row mt-4 justify-content-center">
                   {data.slice(4, 6).map((data) => (
-                    <div className="col mb-3 mb-md-0 col-12 col-md-6 col-xl-5">
+                    <div className="col mb-5 mb-md-0 col-12 col-md-6 col-xl-5">
                       <Card data={data} />
                     </div>
                   ))}

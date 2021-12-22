@@ -4,7 +4,7 @@ import CustomBtn from "../components/customBtn/customBtn";
 import Footer from "../components/footer/footer";
 import { css, cx } from "@emotion/css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import '../styles/index.css'
+import "../styles/index.css";
 import {
   faArrowLeft,
   faChevronLeft,
@@ -76,33 +76,16 @@ export default function Home() {
       >
         <div
           style={{
-            minHeight: "80vh",
+            minHeight: "90vh",
             background: "rgba(62, 45, 27, 0.8)",
           }}
         >
           <div class="container h-100">
-            <div className="row mt-5 mt-lg-0 justify-content-center align-items-center h-100">
+            <div className="row  mt-lg-0 justify-content-center align-items-center h-100">
               <div className="col mt-5 mt-lg-0">
                 <div className="row justify-content-center">
                   <div className="col text-center col-12 col-md-8">
-                    <h1
-                      className="mb-5"
-                      className={css`
-                        font-family: Begum Sans;
-                       font-family: Begum Sans;
-                      font-style: normal;
-                      font-weight: bold;
-                      font-size: 65px;
-                        line-height: 80.5px;
-                        color: #dcd1bf;
-
-                        @(minWidth == 1024px){
-                          font-weight: 700;
-                          font-size: 95px;
-                          line-height: 142.5px;
-                        }
-                      `}
-                    >
+                    <h1 className="headee">
                       Drummersville <br />
                       Podcast
                     </h1>
@@ -114,6 +97,9 @@ export default function Home() {
                     font-size: 25px;
                       line-height: 45px;
                       color: #ad9f82;
+                      @media (max-width: 425px) {
+                        font-size: 20px;
+                      }
                     `)}`}
                     >
                       Bringing to you inspiring, educating, motivating and
@@ -128,18 +114,15 @@ export default function Home() {
                       <button
                         className={`btn py-3  px-4 btn_value ${css(
                           `border-radius: 50px; background: #84382b; color: #fff `
-                          
                         )}`}
                       >
                         <FontAwesomeIcon
                           icon={faPlay}
                           color="#fff"
                           className="mr-2"
-                          style = 'margin-right: 1000px; '
+                          style="margin-right: 1000px; "
                         />
-                        <span className = 'playPodcast'>
-                            Play latest Podcast
-                        </span>
+                        <span className="playPodcast">Play latest Podcast</span>
                       </button>
                     </div>
                   </div>

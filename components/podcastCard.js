@@ -24,6 +24,9 @@ function PodcastCard({ data }) {
           position: absolute;
           right:0;
           top: 480px;
+          @media (max-width: 425px) {
+            top: 525px
+          }
           `)}`}
       >
         <FontAwesomeIcon icon={faPlay}  style = {{color: '#fff'}}/>

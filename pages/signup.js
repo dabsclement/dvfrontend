@@ -75,7 +75,7 @@ const signup = () => {
               </p>
               <hr />
               <h5>
-                Have an account<span>Sign In </span>
+                Have an account<a href='/login'>Sign In </a>
               </h5>
             </div>
           </div>

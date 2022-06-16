@@ -1,6 +1,7 @@
 import "./navbar.css";
 import { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { FaTimes } from "react-icons/fa"
 
 function Navbar() {
   const [open, setOpen] = useState(false);
@@ -21,7 +22,7 @@ function Navbar() {
           </a>
           <div id="navbarNav" className={open ? " navbarr" : "navbarr-a"}>
             <div className="cancel" onClick={change}>
-              X
+              <FaTimes />
             </div>
             <ul className="navbarr-nav">
               <li className="navv-item ss">

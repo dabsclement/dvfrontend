@@ -7,6 +7,9 @@
   margin: auto;
   padding: 1em 0;
 }
+.foot p{
+    color: #84382B;
+}
 .logo {
   position:  relative ;
   text-align:  right ;
@@ -14,16 +17,19 @@
 .logo span{
     font-size: 30px;
     font-weight: 800;
+    color: #84382B;
 }
 .logo p{
     font-size: 18px;
     font-weight: 600;
     margin: -6px 0 0 0;
+    color: #84382B;
+
 }
 .footIcon{
     font-size: 35px;
     margin-left: .5em;
-    color: #000;
+    color: #84382B;
 }
 .social{
     margin: 2em 0;

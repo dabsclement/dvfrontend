@@ -1,6 +1,8 @@
-a{
-    text-decoration: none;
-    color: #fff;
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&family=Nunito:wght@200&family=Open+Sans:wght@300&family=Overpass:wght@300&display=swap');
+
+a {
+  text-decoration: none;
+  color: #fff;
 }
 .Main {
   display: flex;
@@ -27,10 +29,11 @@ a{
 }
 .leftCap {
   position: absolute;
-  bottom: 15%;
+  top: 50%;
   margin: auto;
   width: 70%;
   left: 10%;
+  transform: translateY(-50%);
 }
 .leftCap h1 {
   font-family: Begum Sans;
@@ -73,7 +76,7 @@ a{
   width: 100%;
 }
 .rightCap h3 {
-  font-family: Inter;
+  font-family: 'Noto Serif', serif;
   font-style: normal;
   font-weight: 600;
   font-size: 24px;
@@ -86,7 +89,6 @@ a{
   width: 90%;
   margin: 1em 0;
 }
-
 
 .input > div {
   width: 50%;
@@ -110,26 +112,26 @@ a{
   padding: 0.7em 1em;
 }
 @media (max-width: 1024px) {
-    .Right {
-        width: 100%;
-    }
-    .input {
-        width: 90%;
-    }
-    .input > div input{
-       width: 90%;  
-    }
+  .Right {
+    width: 100%;
+  }
+  .input {
+    width: 90%;
+  }
+  .input > div input {
+    width: 90%;
+  }
 }
 @media (max-width: 768px) {
-    .input {
-        flex-direction: column;
-    }
-    .input > div {
-        width: 100%;
-    }
-    .Email input {
-        width: 90% !important;
-    }
+  .input {
+    flex-direction: column;
+  }
+  .input > div {
+    width: 100%;
+  }
+  .Email input {
+    width: 90% !important;
+  }
 }
 
 .Email {
@@ -243,7 +245,7 @@ a{
   letter-spacing: -0.2px;
   color: #545454;
 }
-.submit h5 span {
+.submit h5 a {
   font-family: Inter;
   font-style: normal;
   font-weight: 600;

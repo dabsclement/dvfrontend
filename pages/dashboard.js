@@ -1,10 +1,10 @@
-import style from '../styles/dashboard.module.css'
+import '../styles/dashboard.module.css'
 
 
 const dashboard = () => {
   return (
-    <div className={style.main}>
-      
+    <div className='center'>
+      <p>this </p>
     </div>
   )
 }

@@ -1,16 +1,28 @@
 import "../styles/newpod.module.css";
 import { AiFillPicture, AiFillCamera } from "react-icons/ai";
-import { FaRegEye } from "react-icons/fa";
+import { FaRegEye, FaTimes } from "react-icons/fa";
 import { BiSquare, BiBold, BiItalic } from "react-icons/bi";
 import { BsCodeSlash, BsBraces } from "react-icons/bs";
-import { IoIosQuote } from 'react-icons/io'
-import { FiLink2 } from 'react-icons/fi'
+import { IoIosQuote } from "react-icons/io";
+import { FiLink2 } from "react-icons/fi";
+import { GiHamburgerMenu } from "react-icons/gi";
 import {
   MdOutlineFormatListBulleted,
   MdOutlineFormatListNumbered,
 } from "react-icons/md";
+import { useState } from "react";
 
 const newPod = () => {
+  const [open, setOpen] = useState(false);
+  const [sty, setSty] = useState(false);
+  const change = () => {
+    setOpen((prev) => !prev);
+  };
+
+  const on = (e) => {
+    setSty(e.target?.id);
+  };
+
   return (
     <div className="main">
       <div className="top">
@@ -40,17 +52,59 @@ const newPod = () => {
         <input type="text" placeholder="Title..." />
 
         <textarea cols="30" placeholder="Description"></textarea>
-        <div className="modal"></div>
-        <div className="het">
-          <BiBold className="icon" />
-          <BiItalic className="icon" />
-          <IoIosQuote className="icon" />
-          <FiLink2 className="icon" />
-          <MdOutlineFormatListBulleted className="icon" />
-          <MdOutlineFormatListNumbered className="icon" />
-          <AiFillCamera className="icon" />
-          <BsCodeSlash className="icon" />
-          <BsBraces className="icon" />
+        <div className="ccancel" onClick={change}>
+          {open ? (
+            <FaTimes className="icon" />
+          ) : (
+            <GiHamburgerMenu className="icon" />
+          )}
+        </div>
+        <div className={open ? "active" : "het"}>
+          <BiBold
+            id="1"
+            onClick={on}
+            className={sty === "1" ? "cli" : "icon"}
+          />
+          <BiItalic
+            id="2"
+            onClick={on}
+            className={sty === "2" ? "cli" : "icon"}
+          />
+          <IoIosQuote
+            id="3"
+            onClick={on}
+            className={sty === "3" ? "cli" : "icon"}
+          />
+          <FiLink2
+            id="4"
+            onClick={on}
+            className={sty === "4" ? "cli" : "icon"}
+          />
+          <MdOutlineFormatListBulleted
+            onClick={on}
+            id="5"
+            className={sty === "5" ? "cli" : "icon"}
+          />
+          <MdOutlineFormatListNumbered
+            onClick={on}
+            id="6"
+            className={sty === "6" ? "cli" : "icon"}
+          />
+          <AiFillCamera
+            id="7"
+            onClick={on}
+            className={sty === "7" ? "cli" : "icon"}
+          />
+          <BsCodeSlash
+            id="8"
+            onClick={on}
+            className={sty === "8" ? "cli" : "icon"}
+          />
+          <BsBraces
+            id="9"
+            onClick={on}
+            className={sty === "9" ? "cli" : "icon"}
+          />
         </div>
       </div>
     </div>

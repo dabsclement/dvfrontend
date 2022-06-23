@@ -134,7 +134,7 @@
   border: none;
   outline: none;
   width: 100%;
-  margin-bottom: .8em;
+  margin-bottom: 0.8em;
 }
 .content textarea {
   border: none;
@@ -160,6 +160,26 @@
   font-size: 18px;
   line-height: 150%;
 }
+.ccancel {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  right: 5%;
+  top: 5%;
+  transform: translate(-5%, -10%);
+  background: #ffffff;
+  color: #000;
+  box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.08);
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ccancel .icon {
+  font-size: 30px;
+  color: #000;
+}
+
 .het {
   position: absolute;
   width: 50px;
@@ -173,12 +193,70 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+  opacity: 1;
+  transition: all 0.6s ease-in-out;
 }
+.active {
+  opacity: 0;
+  position: absolute;
+  width: 50px;
+  height: 350px;
+  right: 5%;
+  top: 50%;
+  transform: translate(-5%, -50%);
+  background: #ffffff;
+  box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.08);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  transition: all 0.6s ease-in-out;
+}
+
 .het .icon {
   /* margin-bottom: .5em; */
   font-size: 20px;
   color: #666666;
- width: 100%;
-    margin: auto;
-    cursor: pointer;
+  margin: auto;
+  cursor: pointer;
+}
+.het .cli{
+  background-color: rgba(128,128,128, 0.3);
+  font-size: 20px;
+  color: #474747;
+  margin: auto;
+  width: 100%;
+  cursor: pointer;
+}
+.active .icon {
+  /* margin-bottom: .5em; */
+  font-size: 20px;
+  color: #666666;
+  width: 100%;
+  margin: auto;
+  cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+  .main {
+    padding: 1em 0.5em;
+  }
+  .mid {
+    width: 98%;
+  }
+  .content {
+    width: 96%;
+  }
+}
+@media (max-width: 768px) {
+  .mid {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .check {
+    margin-bottom: 1em;
+  }
+  .log {
+    width: 100%;
+  }
 }

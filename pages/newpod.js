@@ -1,7 +1,14 @@
 import "../styles/newpod.module.css";
-import { AiFillPicture } from "react-icons/ai";
+import { AiFillPicture, AiFillCamera } from "react-icons/ai";
 import { FaRegEye } from "react-icons/fa";
-import { BiSquare } from "react-icons/bi";
+import { BiSquare, BiBold, BiItalic } from "react-icons/bi";
+import { BsCodeSlash, BsBraces } from "react-icons/bs";
+import { IoIosQuote } from 'react-icons/io'
+import { FiLink2 } from 'react-icons/fi'
+import {
+  MdOutlineFormatListBulleted,
+  MdOutlineFormatListNumbered,
+} from "react-icons/md";
 
 const newPod = () => {
   return (
@@ -32,11 +39,18 @@ const newPod = () => {
       <div className="content">
         <input type="text" placeholder="Title..." />
 
-        <textarea cols="30" rows="10">
-          Description
-        </textarea>
-        <div className="modal">
-          
+        <textarea cols="30" placeholder="Description"></textarea>
+        <div className="modal"></div>
+        <div className="het">
+          <BiBold className="icon" />
+          <BiItalic className="icon" />
+          <IoIosQuote className="icon" />
+          <FiLink2 className="icon" />
+          <MdOutlineFormatListBulleted className="icon" />
+          <MdOutlineFormatListNumbered className="icon" />
+          <AiFillCamera className="icon" />
+          <BsCodeSlash className="icon" />
+          <BsBraces className="icon" />
         </div>
       </div>
     </div>

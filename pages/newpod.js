@@ -79,9 +79,6 @@ const newPod = () => {
     });
   };
 
-  // image selete and preview
-  // const [images, setImage] = useState();
-
   return (
     <div className="main">
       <div className="top">
